@@ -2,6 +2,8 @@
 
 Second Mind is a local-first personal cognitive operating system.
 
+![Second Mind Core Idea](docs/assets/second-mind-core-idea.png)
+
 It is not just a note system, not just a chat interface, and not just a knowledge base.  
 Its purpose is to help the user continuously turn complex inputs into judgment, action, memory, and review.
 
