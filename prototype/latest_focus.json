@@ -1,0 +1,35 @@
+[
+  {
+    "system": "研究",
+    "title": "Tactile perception through fluid–solid interaction",
+    "summary": "当前触觉研究的缺口，是很多工作强调材料或结构创新，却没有说清稳定感知究竟先卡在器件、界面还是系统链路。它解决的问题，是把流固耦合、压力传递、外置读出和算法解码这些环节放到同一条链里分析稳定信号怎么形成。它采用的方案，是用整套系统级验证而不是单器件对比，去拆开各层级对感知结果的贡献。",
+    "relation": "",
+    "importance": "",
+    "source": "Nature",
+    "publishedAt": "2026-04-30",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9YdkRrSm1kWjBPZ2ZxYms5eWt3ZTM2VXpndG1kR0pqRno1QjdHeWFGVC1ybW9Wc3NyUnNPdEd0U2hGN3Zkd0dYa1pmVXhWa1FJZ3pHR0diT09JTVBkMWx3?oc=5",
+    "kind": "高等级论文"
+  },
+  {
+    "system": "投资",
+    "title": "PaXini Unveils the \"Tactile Infrastructure\" for Embodied AI, Redefining Full-Stack Product Matrix at CES 2026",
+    "summary": "当前触觉赛道的缺口，是很多公司能讲概念和样机，却没有清楚说明自己到底卖器件、模组还是平台。它解决的问题，是把产品边界从模糊宣传推进到更明确的产品体系。它采用的方案，是把触觉硬件、数据、集成接口和平台能力一起打包成一条更完整的交付路线。",
+    "relation": "",
+    "importance": "",
+    "source": "PR Newswire",
+    "publishedAt": "2026-01-07",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOM1lBZzRUcmRGc0pZbzRfYzk4ZW5na1JoTkx2T1hhMGFhT19JM0k3d0NCbFhxRzJqdXc4YVlISGpJYUZ2YmhXSUc2UDBpSUQ2WkJRRnJnSHZZdUZFZXcycy1SWVJELW9IX2pQUWF2V0xFS25yQmp0TjNSRElvSTNEelh3bC1oNUozY2FzdTZRQlhVRXZsRzV5OHlwTS1ScEE2YV9QM2FaNk02TVZTbGtzM3FGSmFMS3FZcFFqeEpEdXZRUFdENDRGR0huUVNkdGZhLUF3ek9uRFJUQWdsc1NYcDlTTEdfRUtrZ3BJRDNDTDN1UUNu?oc=5",
+    "kind": "国内触觉公司"
+  },
+  {
+    "system": "投资",
+    "title": "Elevating tactile sensing for next-generation robotic hands",
+    "summary": "当前国际触觉路线的缺口，是不少方案有感知能力，但还没有收敛成标准化、可集成的机器人指尖模块。它解决的问题，是把触觉从实验室能力推进到更接近工程部署的部件形态。它采用的方案，是同时推进模块封装、接口定义、接触稳定性和系统集成边界。",
+    "relation": "",
+    "importance": "",
+    "source": "Electropages",
+    "publishedAt": "2026-05-06",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZnJ0dVVUYjBoRGVGbjRYQXRfQ05fVjZMdVZGNGJBLUV1R2ZjcnpNbjM0MFBpZmVIS0tldnFOdVpYaXR2X2h0clV2aE80THVqd1lKalV4S1dtdDV1b3FkUmtMcFFiNGdqdmJLeXV5UG5CcG5vVWdCbmR2NU10b05zZGJSbmNlMDlYQWFCamR1OG9tRTJsblpB?oc=5",
+    "kind": "国际触觉对标"
+  }
+]

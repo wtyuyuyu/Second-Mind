@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Second Mind 控制台</title>
+    <link rel="stylesheet" href="styles.css?v=20260508a" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Second Mind navigation">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <strong>Second Mind</strong>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="系统导航">
+          <button class="nav-item active" type="button" data-system="research">
+            <span class="nav-icon" aria-hidden="true">研</span>
+            研究
+          </button>
+          <button class="nav-item" type="button" data-system="ai">
+            <span class="nav-icon" aria-hidden="true">AI</span>
+            AI 系统
+          </button>
+          <button class="nav-item" type="button" data-system="life">
+            <span class="nav-icon" aria-hidden="true">生</span>
+            生活
+          </button>
+          <button class="nav-item" type="button" data-system="invest">
+            <span class="nav-icon" aria-hidden="true">投</span>
+            投资
+          </button>
+          <button class="nav-item" type="button" data-system="startup">
+            <span class="nav-icon" aria-hidden="true">创</span>
+            创业
+          </button>
+        </nav>
+
+        <a
+          class="sidebar-note"
+          href="/open-folder?system=research"
+          title="打开当前系统对应的 Obsidian 文件夹"
+          id="sidebarNoteLink"
+        >
+          <span id="sidebarNoteLabel">事实源</span>
+          <strong id="sidebarNoteTitle">本地 Markdown</strong>
+          <p id="sidebarNoteBody">Zotero、Obsidian、Codex 负责输入与执行，控制台只做汇总、判断与复盘。</p>
+          <p class="sidebar-action" id="sidebarNoteAction">打开研究文件夹</p>
+        </a>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="topbar-actions">
+            <button class="secondary-button" type="button" id="focusReviewButton">查看复盘问题</button>
+            <button class="primary-button" type="button" id="focusSetupButton">查看工具接入</button>
+          </div>
+        </header>
+
+        <section class="metrics-strip" aria-label="系统总览指标">
+          <div class="metric">
+            <span>已导入论文</span>
+            <strong id="paperCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>投资观察卡</span>
+            <strong id="investCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>已连接工具</span>
+            <strong id="toolCount">5</strong>
+          </div>
+          <div class="metric">
+            <span>活跃系统</span>
+            <strong id="systemCount">5</strong>
+          </div>
+        </section>
+
+        <section class="panel brief-panel" aria-labelledby="briefTitle">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">今日 3 分钟简报</p>
+              <h2 id="briefTitle">当前最值得看的三件事</h2>
+            </div>
+            <span class="micro-note">每条只回答三件事：它讲了什么、和当前主线什么关系、为什么重要。</span>
+          </div>
+          <div class="brief-list" id="briefList"></div>
+        </section>
+
+        <section class="panel actions-panel" aria-labelledby="actionsTitle">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">今日行动目标</p>
+              <h2 id="actionsTitle">每个系统只保留一个推进动作</h2>
+            </div>
+          </div>
+          <div class="action-grid" id="actionGrid"></div>
+        </section>
+
+        <section class="detail-layout">
+          <section class="panel detail-panel" aria-labelledby="detailTitle">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label" id="detailLabel">系统详情</p>
+                <h2 id="detailTitle"></h2>
+              </div>
+              <span class="status-chip" id="detailStatus">运行中</span>
+            </div>
+
+            <article class="detail-summary">
+              <span id="detailPurposeLabel">系统使命</span>
+              <h3 id="detailHeadline"></h3>
+              <p id="detailSummary"></p>
+            </article>
+
+            <div class="modules-grid" id="modulesGrid"></div>
+
+            <div class="workflow-card">
+              <div class="subsection-title">运行流程</div>
+              <div class="workflow-rail" id="workflowRail"></div>
+            </div>
+
+            <div class="questions-row">
+              <div class="question-card">
+                <span>下一个复盘问题</span>
+                <strong id="reviewQuestion"></strong>
+              </div>
+              <div class="question-card">
+                <span>下一步动作</span>
+                <strong id="nextAction"></strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel side-panel" aria-labelledby="sideTitle">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">跨系统耦合</p>
+                <h2 id="sideTitle">当前系统会影响什么</h2>
+              </div>
+            </div>
+            <div class="impact-list" id="impactList"></div>
+
+            <div class="watchlist-card">
+              <div class="subsection-title">本系统重点观察</div>
+              <ul id="watchList"></ul>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel sync-panel" id="syncPanel" aria-labelledby="syncTitle" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">本地同步</p>
+              <h2 id="syncTitle">Obsidian live vault 当前状态</h2>
+            </div>
+            <span class="micro-note" id="syncTimestamp">正在读取本地状态…</span>
+          </div>
+          <div class="sync-grid">
+            <article class="sync-card">
+              <div class="subsection-title">研究系统已同步</div>
+              <ul class="sync-list" id="researchSyncList"></ul>
+            </article>
+            <article class="sync-card">
+              <div class="subsection-title">投资系统已同步</div>
+              <ul class="sync-list" id="investSyncList"></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel tools-panel" id="toolsPanel" aria-labelledby="toolsTitle">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">本地工具接入</p>
+              <h2 id="toolsTitle">Zotero 与 Obsidian 的最小可运行配置</h2>
+            </div>
+            <span class="micro-note">先装最小集，不要一次装满所有插件。</span>
+          </div>
+          <div class="tools-grid">
+            <article class="tool-card">
+              <h3>Zotero</h3>
+              <p>负责文献、批注、高亮、引用键与 PDF 注释，是研究系统最上游的高价值输入层。</p>
+              <ul>
+                <li><strong>Better BibTeX</strong>：生成并维护 citation key，给 Obsidian 引文导入提供稳定锚点。</li>
+              </ul>
+            </article>
+
+            <article class="tool-card">
+              <h3>Obsidian</h3>
+              <p>负责本地 Markdown 记忆层、结构化查询、任务聚合与模板化落库。</p>
+              <ul>
+                <li><strong>Zotero Integration</strong>：导入 citations、bibliography、notes 与 PDF annotations。</li>
+                <li><strong>Dataview</strong>：把四系统页面变成可查询的表格、列表与聚合视图。</li>
+                <li><strong>Tasks</strong>：统一管理行动项与复盘项。</li>
+                <li><strong>Templater</strong>：把研究页、投资页、复盘页做成可重复模板。</li>
+                <li><strong>Local REST API</strong>（可选）：后续让 Codex 通过本地 API 安全读写 vault。</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js?v=20260508a"></script>
+  </body>
+</html>

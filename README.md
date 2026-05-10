@@ -79,6 +79,26 @@ It contains:
 - operating principles
 - research-first strategy
 - wiki schema v1
+- Research Loop 中文原型 PRD
+- 用于验证 v1 闭环的静态中文产品原型
+
+## Prototype
+
+当前静态原型已经扩展为中文优先的 **四系统控制台**，用于验证 Research、AI、Life、Investment 如何在同一界面中协同运行。
+
+其中研究系统仍然优先验证这条核心闭环：
+
+```text
+输入 -> 判断 -> 记忆 -> 行动 -> 复盘
+```
+
+在浏览器中打开 `prototype/index.html` 即可查看交互式静态原型。
+
+相关 PRD 位于 `docs/PRD_RESEARCH_LOOP_PROTOTYPE.md`。
+
+本地工具接入建议见 `docs/OBSIDIAN_ZOTERO_SETUP.md`。
+
+Obsidian 四系统起步骨架见 `obsidian-vault-starter/`。
 
 ## Guiding Principles
 
